@@ -6,4 +6,7 @@ class JavaFXAppTest {
     void aDummyTest() {
         assertEquals(0,0);
     }
+
+    @Test
+    void addTest1(){assertEquals(2, new JavaFXApp().computeAdd(1,1));}
 }
