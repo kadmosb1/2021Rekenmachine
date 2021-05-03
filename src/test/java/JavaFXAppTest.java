@@ -7,7 +7,6 @@ class JavaFXAppTest {
         assertEquals(0,0);
     }
 
-
     @Test
     void multiply(){
         JavaFXApp obj = new JavaFXApp();
