@@ -8,8 +8,8 @@ class JavaFXAppTest {
     }
 
     @Test
-    void fabianTest(){
-        JavaFXApp javaFXApp = new JavaFXApp();
-        assertEquals(2,javaFXApp.computeDivide(10, 5) );
+    void multiply(){
+        JavaFXApp obj = new JavaFXApp();
+        assertEquals(10, obj.computeMultiply(5,2));
     }
 }
