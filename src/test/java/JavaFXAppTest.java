@@ -7,12 +7,8 @@ class JavaFXAppTest {
         assertEquals(0,0);
     }
 
-    @Test
-    void computeMultiply() {
-        int getal1 = 1;
-        int getal2 = 1;
-
-        JavaFXApp javaFXApp = new JavaFXApp();
-        assertEquals(2, javaFXApp.computeAdd(getal1, getal2));
+    void multiply(){
+        JavaFXApp obj = new JavaFXApp();
+        assertEquals(10, obj.computeMultiply(5,2));
     }
 }
