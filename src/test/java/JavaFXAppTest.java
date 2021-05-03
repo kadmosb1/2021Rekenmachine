@@ -6,4 +6,10 @@ class JavaFXAppTest {
     void aDummyTest() {
         assertEquals(0,0);
     }
+
+    @Test
+    void fabianTest(){
+        JavaFXApp javaFXApp = new JavaFXApp();
+        assertEquals(2,javaFXApp.computeDivide(10, 5) );
+    }
 }
