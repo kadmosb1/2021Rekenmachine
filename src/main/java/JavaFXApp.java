@@ -29,8 +29,8 @@ public class JavaFXApp extends Application {
         return Integer.parseInt (textField.getText ());
     }
 
-    protected int computeAdd (int number1, int number2) {
-        return 0;
+    protected int computeAdd(int number1, int number2) {
+            return number1 + number2;
     }
 
     protected int computeMultiply (int number1, int number2) {
