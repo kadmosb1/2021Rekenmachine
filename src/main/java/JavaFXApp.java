@@ -38,7 +38,11 @@ public class JavaFXApp extends Application {
     }
 
     protected int computeDivide (int number1, int number2) {
-        return 0;
+        try {
+            return number1 / number2;
+        } catch (ArithmeticException e) {
+            throw new ArithmeticException("Division by 0");
+        }
     }
 
     private void compute (String operator) {
