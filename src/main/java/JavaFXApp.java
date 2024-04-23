@@ -38,7 +38,8 @@ public class JavaFXApp extends Application {
     }
 
     protected int computeMultiply (int number1, int number2) {
-        return 0;
+        ComputeMultiply computeMultiply = new ComputeMultiply();
+        return computeMultiply.compute(number1, number2);
     }
 
     protected int computeDivide (int number1, int number2) {
@@ -168,5 +169,10 @@ public class JavaFXApp extends Application {
 class PlusComputation implements Computation {
     public int compute(int number1, int number2) {
         return number1 + number2;
+    }
+}
+class ComputeMultiply implements Computation {
+    public int compute(int num1, int num2){
+        return num1 * num2;
     }
 }
