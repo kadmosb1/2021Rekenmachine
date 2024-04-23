@@ -11,3 +11,9 @@ class PlusComputation implements Computation {
         return number1 + number2;
     }
 }
+
+class ComputeSubtract implements Computation {
+    public int compute(int number1, int number2){
+        return number1 - number2;
+    }
+}

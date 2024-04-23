@@ -47,6 +47,11 @@ public class JavaFXApp extends Application {
         return computeDivide(number1, number2);
     }
 
+    protected int computeSubtract (int number1, int number2) {
+        ComputeSubtract computeSubtract = new ComputeSubtract();
+        return computeSubtract.compute(number1, number2);
+    }
+
     private void compute (String operator) {
 
         int result;
@@ -64,7 +69,7 @@ public class JavaFXApp extends Application {
                 result = computeDivide ();
                 break;
             case SUBSTRACT:
-                result = computeSubstract(number1, number2);
+                result = computeSubtract(number1, number2);
                 break;
             default:
                 result = 0;
