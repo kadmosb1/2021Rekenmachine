@@ -8,14 +8,11 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Font;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import static javafx.scene.input.KeyEvent.KEY_PRESSED;
 import static javafx.scene.input.MouseEvent.MOUSE_CLICKED;
-interface Computation {
-    public int compute(int number1, int number2);
-}
+
 
 public class JavaFXApp extends Application {
 
@@ -38,7 +35,8 @@ public class JavaFXApp extends Application {
     }
 
     protected int computeMultiply (int number1, int number2) {
-        return 0;
+        MultiplyComputer computeMultiply = new MultiplyComputer();
+        return computeMultiply.compute(number1, number2);
     }
 
     protected int computeDivide (int number1, int number2) {
@@ -163,10 +161,5 @@ public class JavaFXApp extends Application {
 
     public static void main(String[] args) {
         launch (args);
-    }
-}
-class PlusComputation implements Computation {
-    public int compute(int number1, int number2) {
-        return number1 + number2;
     }
 }
