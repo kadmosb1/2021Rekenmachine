@@ -43,15 +43,13 @@ public class JavaFXApp extends Application {
 
     private void compute (String operator) {
 
-        IComputation computation = null;
-
         int result;
         int number1 = getNumberFromTextField (txtNumber1);
         int number2 = getNumberFromTextField (txtNumber2);
 
         switch (operator) {
             case PLUS:
-                computation = new PlusComputation();
+                result = computeAdd(number1,number2);
                 break;
             case MULTIPLY:
                 result = computeMultiply (number1, number2);
@@ -62,7 +60,6 @@ public class JavaFXApp extends Application {
             default:
                 result = 0;
         }
-        result = computation.compute(number1,number2);
         txtResult.setText (String.valueOf (result));
     }
 
