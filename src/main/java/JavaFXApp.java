@@ -44,7 +44,7 @@ public class JavaFXApp extends Application {
 
     protected int computeDivide (int number1, int number2) {
         DivideComputer computeDivide = new DivideComputer();
-        return computeDivide(number1, number2);
+        return computeDivide.compute(number1, number2);
     }
 
     protected int computeSubtract (int number1, int number2) {
