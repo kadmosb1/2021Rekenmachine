@@ -13,6 +13,9 @@ import javafx.stage.Stage;
 
 import static javafx.scene.input.KeyEvent.KEY_PRESSED;
 import static javafx.scene.input.MouseEvent.MOUSE_CLICKED;
+interface Computation {
+    public int compute(int number1, int number2);
+}
 
 public class JavaFXApp extends Application {
 
@@ -30,7 +33,8 @@ public class JavaFXApp extends Application {
     }
 
     protected int computeAdd (int number1, int number2) {
-        return 0;
+                PlusComputation plusComputation = new PlusComputation();
+                return plusComputation.compute(number1, number2);
     }
 
     protected int computeMultiply (int number1, int number2) {
@@ -159,5 +163,10 @@ public class JavaFXApp extends Application {
 
     public static void main(String[] args) {
         launch (args);
+    }
+}
+class PlusComputation implements Computation {
+    public int compute(int number1, int number2) {
+        return number1 + number2;
     }
 }
