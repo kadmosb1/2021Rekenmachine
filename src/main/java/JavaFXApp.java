@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 import static javafx.scene.input.KeyEvent.KEY_PRESSED;
 import static javafx.scene.input.MouseEvent.MOUSE_CLICKED;
 
+
 public class JavaFXApp extends Application {
 
     Pane rootPane;
@@ -29,11 +30,14 @@ public class JavaFXApp extends Application {
     }
 
     protected int computeAdd (int number1, int number2) {
-        return 0;
+                PlusComputation plusComputation = new PlusComputation();
+                return plusComputation.compute(number1, number2);
     }
 
     protected int computeMultiply (int number1, int number2) {
-        return 0;
+
+        MultiplyComputer computeMultiply = new MultiplyComputer();
+        return computeMultiply.compute(number1, number2);
     }
 
     protected int computeDivide (int number1, int number2) {
@@ -162,8 +166,3 @@ public class JavaFXApp extends Application {
     }
 }
 
-class DivideComputation implements Computation {
-    public int compute(int number1, int number2) {
-        return number1 / number2;
-    }
-}
