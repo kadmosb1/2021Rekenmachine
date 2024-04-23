@@ -8,7 +8,6 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Font;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import static javafx.scene.input.KeyEvent.KEY_PRESSED;
@@ -38,7 +37,8 @@ public class JavaFXApp extends Application {
     }
 
     protected int computeDivide (int number1, int number2) {
-        return 0;
+        ComputeDivide computeDivide = new ComputeDivide();
+        return computeDivide(number1, number2);
     }
 
     private void compute (String operator) {
@@ -55,7 +55,7 @@ public class JavaFXApp extends Application {
                 result = computeMultiply (number1, number2);
                 break;
             case DIVIDE:
-                result = computeDivide (number1, number2);
+                result = computeDivide ();
                 break;
             default:
                 result = 0;
@@ -159,5 +159,11 @@ public class JavaFXApp extends Application {
 
     public static void main(String[] args) {
         launch (args);
+    }
+}
+
+class DivideComputation implements Computation {
+    public int compute(int number1, int number2) {
+        return number1 / number2;
     }
 }
