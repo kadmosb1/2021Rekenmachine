@@ -43,7 +43,7 @@ public class JavaFXApp extends Application {
     }
 
     protected int computeDivide (int number1, int number2) {
-        ComputeDivide computeDivide = new ComputeDivide();
+        DivideComputer computeDivide = new DivideComputer();
         return computeDivide(number1, number2);
     }
 
@@ -66,7 +66,7 @@ public class JavaFXApp extends Application {
                 result = computeMultiply (number1, number2);
                 break;
             case DIVIDE:
-                result = computeDivide ();
+                result = computeDivide (number1, number2);
                 break;
             case SUBSTRACT:
                 result = computeSubtract(number1, number2);
