@@ -43,23 +43,18 @@ public class JavaFXApp extends Application {
 
     private void compute (String operator) {
 
-        int result;
         int number1 = getNumberFromTextField (txtNumber1);
         int number2 = getNumberFromTextField (txtNumber2);
 
+        IComputation computation = null;
+
         switch (operator) {
-            case PLUS:
-                result = computeAdd (number1, number2);
-                break;
             case MULTIPLY:
-                result = computeMultiply (number1, number2);
+                computation = new MultiplyComputation();
                 break;
-            case DIVIDE:
-                result = computeDivide (number1, number2);
-                break;
-            default:
-                result = 0;
         }
+
+        int result = computation.compute(number1, number2);
 
         txtResult.setText (String.valueOf (result));
     }
