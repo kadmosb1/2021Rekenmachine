@@ -30,15 +30,15 @@ public class JavaFXApp extends Application {
     }
 
     protected int computeAdd (int number1, int number2) {
-        return 0;
+        return number1 + number2;
     }
 
     protected int computeMultiply (int number1, int number2) {
-        return 0;
+        return number1 * number2;
     }
 
     protected int computeDivide (int number1, int number2) {
-        return 0;
+        return number1 / number2;
     }
 
     private void compute (String operator) {
@@ -49,7 +49,7 @@ public class JavaFXApp extends Application {
 
         switch (operator) {
             case PLUS:
-                result = computeAdd (number1, number2);
+                result = computeAdd(number1,number2);
                 break;
             case MULTIPLY:
                 result = computeMultiply (number1, number2);
@@ -60,7 +60,6 @@ public class JavaFXApp extends Application {
             default:
                 result = 0;
         }
-
         txtResult.setText (String.valueOf (result));
     }
 
