@@ -42,14 +42,24 @@ public class JavaFXApp extends Application {
     }
 
     private void compute (String operator) {
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
         int result;
         int number1 = getNumberFromTextField (txtNumber1);
         int number2 = getNumberFromTextField (txtNumber2);
 
         switch (operator) {
             case PLUS:
+<<<<<<< Updated upstream
                 result = computeAdd(number1,number2);
+=======
+                computation = new PlusComputation();
+                break;
+            case MULTIPLY:
+                computation = new MultiplyComputation();
+>>>>>>> Stashed changes
                 break;
             case MULTIPLY:
                 result = computeMultiply (number1, number2);
@@ -60,6 +70,10 @@ public class JavaFXApp extends Application {
             default:
                 result = 0;
         }
+<<<<<<< Updated upstream
+=======
+        result = computation.compute(number1, number2);
+>>>>>>> Stashed changes
         txtResult.setText (String.valueOf (result));
     }
 
