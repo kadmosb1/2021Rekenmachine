@@ -43,7 +43,7 @@ public class JavaFXApp extends Application {
 
     private void compute (String operator) {
 
-        IComputation computation;
+        IComputation computation = null;
 
         int result;
         int number1 = getNumberFromTextField (txtNumber1);
