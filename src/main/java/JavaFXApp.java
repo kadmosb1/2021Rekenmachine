@@ -8,11 +8,11 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Font;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import static javafx.scene.input.KeyEvent.KEY_PRESSED;
 import static javafx.scene.input.MouseEvent.MOUSE_CLICKED;
+
 
 public class JavaFXApp extends Application {
 
@@ -25,20 +25,31 @@ public class JavaFXApp extends Application {
     private static final String MULTIPLY = "*";
     private static final String DIVIDE = "/";
 
+    private static final String SUBSTRACT = "-";
+
     private int getNumberFromTextField (TextField textField) {
         return Integer.parseInt (textField.getText ());
     }
 
     protected int computeAdd (int number1, int number2) {
-        return 0;
+                PlusComputation plusComputation = new PlusComputation();
+                return plusComputation.compute(number1, number2);
     }
 
     protected int computeMultiply (int number1, int number2) {
-        return 0;
+
+        MultiplyComputer computeMultiply = new MultiplyComputer();
+        return computeMultiply.compute(number1, number2);
     }
 
     protected int computeDivide (int number1, int number2) {
-        return 0;
+        DivideComputer computeDivide = new DivideComputer();
+        return computeDivide.compute(number1, number2);
+    }
+
+    protected int computeSubtract (int number1, int number2) {
+        ComputeSubtract computeSubtract = new ComputeSubtract();
+        return computeSubtract.compute(number1, number2);
     }
 
     private void compute (String operator) {
@@ -56,6 +67,9 @@ public class JavaFXApp extends Application {
                 break;
             case DIVIDE:
                 result = computeDivide (number1, number2);
+                break;
+            case SUBSTRACT:
+                result = computeSubtract(number1, number2);
                 break;
             default:
                 result = 0;
@@ -161,3 +175,4 @@ public class JavaFXApp extends Application {
         launch (args);
     }
 }
+
