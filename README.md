@@ -1,1 +1,1 @@
-# opt3-rekenmachine (voor het leren werken met GitHub)
+# Rekenmachine (voor het leren werken met GitHub)
