@@ -24,6 +24,7 @@ public class JavaFXApp extends Application {
     private static final String PLUS = "+";
     private static final String MULTIPLY = "*";
     private static final String DIVIDE = "/";
+    private static final String SUBTRACT = "-";
 
     private int getNumberFromTextField(TextField textField) {
         return Integer.parseInt(textField.getText());
@@ -60,6 +61,10 @@ public class JavaFXApp extends Application {
             case DIVIDE:
                 result = computeDivide(number1, number2);
                 break;
+            case SUBTRACT:
+                result = computeSubtract(number1, number2);
+                break;
+
             default:
                 result = 0;
         }
