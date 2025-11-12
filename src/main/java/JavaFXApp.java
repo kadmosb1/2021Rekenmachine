@@ -163,7 +163,7 @@ public class JavaFXApp extends Application {
         addButton(PLUS, 160, 10, 105);
         addButton(MULTIPLY, 160, 170, 105);
         addButton(DIVIDE, 160, 330, 105);
-        addButton(SUBTRACT, 160, 435, 105);
+        addButton(SUBTRACT, 160, 490, 105);
         txtResult = addTextField("Hier wordt het resultaat getoond...", false, 480, 10, 155);
         txtResult.setEditable(false);
 
