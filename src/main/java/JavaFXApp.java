@@ -45,6 +45,11 @@ public class JavaFXApp extends Application {
         return number1 / number2;
     }
 
+    // Dit is om nummers af te trekken (kind genaamd nummer)
+    protected int computeSubtract(int number1, int number2) {
+        return number1 - number2;
+    }
+
     private void compute(String operator) {
 
         int result;
@@ -158,6 +163,7 @@ public class JavaFXApp extends Application {
         addButton(PLUS, 160, 10, 105);
         addButton(MULTIPLY, 160, 170, 105);
         addButton(DIVIDE, 160, 330, 105);
+        addButton(SUBTRACT, 160, 435, 105);
         txtResult = addTextField("Hier wordt het resultaat getoond...", false, 480, 10, 155);
         txtResult.setEditable(false);
 
