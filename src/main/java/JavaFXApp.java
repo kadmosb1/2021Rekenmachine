@@ -29,14 +29,17 @@ public class JavaFXApp extends Application {
         return Integer.parseInt(textField.getText());
     }
 
+    // Dit is om nummers bij elkaar op te tellen
     protected int computeAdd(int number1, int number2) {
         return number1 + number2;
     }
 
+    // Dit is om nummers te vermenigvuldigen
     protected int computeMultiply(int number1, int number2) {
         return number1 * number2;
     }
 
+    // Dit is om nummers te delen
     protected int computeDivide(int number1, int number2) {
         return number1 / number2;
     }
