@@ -24,21 +24,28 @@ public class JavaFXApp extends Application {
     private static final String PLUS = "+";
     private static final String MULTIPLY = "*";
     private static final String DIVIDE = "/";
+    private static final String SUBTRACT = "-";
+    private static final String SQUARE = "^2";
+    private static final String MODULO = "%";
 
     private int getNumberFromTextField (TextField textField) {
         return Integer.parseInt (textField.getText ());
     }
 
     protected int computeAdd (int number1, int number2) {
-        return 0;
+        return number1 + number2;
     }
 
     protected int computeMultiply (int number1, int number2) {
-        return 0;
+        return number1 * number2;
     }
 
     protected int computeDivide (int number1, int number2) {
-        return 0;
+        return number1 / number2;
+    }
+
+    protected int computeSubtract (int number1, int number2) {
+        return number1 - number2;
     }
 
     private void compute (String operator) {
@@ -56,6 +63,9 @@ public class JavaFXApp extends Application {
                 break;
             case DIVIDE:
                 result = computeDivide (number1, number2);
+                break;
+            case SUBTRACT:
+                result = computeSubtract (number1, number2);
                 break;
             default:
                 result = 0;
@@ -142,9 +152,11 @@ public class JavaFXApp extends Application {
         txtNumber1 = addTextField ("Voer hier het eerste getal in...", true, 310, 181, 15);
         addLabel ("Getal 2", 161, 71, 10, 40);
         txtNumber2 = addTextField ("Voer hier het tweede getal in...", true, 310, 181, 55);
+        //make it 2 rows instead 1 row
         addButton (PLUS, 160, 10, 105);
         addButton (MULTIPLY, 160, 170, 105);
         addButton (DIVIDE, 160, 330, 105);
+        addButton (SUBTRACT, 160, 490, 105);
         txtResult = addTextField ("Hier wordt het resultaat getoond...", false, 480, 10, 155);
         txtResult.setEditable (false);
 
